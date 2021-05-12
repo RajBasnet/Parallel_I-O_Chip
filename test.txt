@@ -1,0 +1,81 @@
+restart
+
+force RESET 1 @ 0ns
+force WR 1 @ 0ns
+force RD 1 @ 0ns
+force CE 1 @ 0ns
+force ACK 1 @ 0ns
+force A0 0 @ 0ns
+
+force RESET 0 @ 100ns
+
+force CE 1 @ 100ns
+force RD 0 @ 100ns
+
+force CE 0 @ 200ns
+force RD 1 @ 200ns
+
+force A0 1 @ 300ns
+force WR 0 @ 300ns
+force D 8'bxxxxxx00 @ 300ns
+
+force A0 0 @ 400ns
+
+force D 8'b01011010 @ 400ns
+
+force WR 1 @ 500ns
+
+force D 8'bxxxxxxxx @ 550ns
+
+force WR 0 @ 600ns
+
+force D 8'b10100101 @ 650ns
+
+force D 8'bxxxxxxxx @ 750ns
+
+force WR 1 @ 700ns
+
+force RESET 1 @ 800ns
+force WR 1 @ 800ns
+force RD 1 @ 800ns
+force CE 1 @ 800ns
+force ACK 1 @ 800ns
+force A0 0 @ 800ns
+
+force RESET 0 @ 1000ns
+
+force CE 0 @ 1200ns
+force A0 1 @ 1200ns
+force WR 0 @ 1200ns
+force D 8'bxxxxxx11 @ 1200ns
+
+force RD 0 @ 1400ns
+
+force RD 1 @ 1600ns
+
+force A0 0 @ 1800ns
+force D 8'b00111100 @ 1800ns
+
+force WR 1 @ 2000ns
+ 
+force RD 0 @ 2200ns
+force A0 1 @ 2200ns
+
+force RD 1 @ 2400ns
+
+force ACK 0 @ 2400ns
+
+force ACK 1 @ 2600ns
+
+force RD 0 @ 2600ns
+
+force RD 1 @ 2800ns
+force A0 0 @ 2800ns
+force WR 0 @ 2800ns
+force D 8'b11000011 @ 2850ns
+
+force WR 1 @ 3000ns
+
+force RESET 1 @ 3200ns
+
+run 3400ns
